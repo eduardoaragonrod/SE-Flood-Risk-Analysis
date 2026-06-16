@@ -1,38 +1,23 @@
-# Southeast U.S. Flood Risk Analysis
+# SE-Flood-Risk-Analysis
+
+This repository contains my internship project focusing on the spatial and temporal analysis of flood inundations across the Southeast United States (from 2003 to 2024).
 
 ## Overview
-This repository contains the work for my internship project focused on analyzing and visualizing historical flood inundations across the Southeastern United States. The project leverages satellite observational data from the Dartmouth Flood Observatory (DFO) spanning from 2003 to 2024. 
 
-The goal of this project is to process large geospatial datasets and provide an interactive web dashboard for researchers to explore flood events, their duration, and their human impact (such as displacement and fatalities) across specific states and time periods.
-
-## Project Structure
-The repository is organized into data processing and visualization components:
-
-* **`data_raw/`**: Contains the original, unprocessed datasets (Ignored in version control due to file size constraints).
-* **`data_clean/`**: Contains the cleaned and filtered subset of the DFO data used for the application (`DFO_Southeast_2003_2024.csv`).
-* **`notebooks/`**: Jupyter notebooks detailing the data cleaning pipelines, exploratory data analysis (EDA), and geospatial transformations using Python (Pandas/GeoPandas).
-* **`src/`**: The frontend React application that serves as the interactive dashboard for the cleaned data.
+The main objective of this project is to build an interactive dashboard and data pipeline to evaluate historical flood events. By combining historical **DFO (Dartmouth Flood Observatory)** data with **NRT (Near Real-Time)** satellite information, this project aims to identify underlying patterns and causal links related to severe flooding.
 
 ## Features
-* **Interactive Web Map**: Visualizes historical flood polygons using Leaflet.
-* **Temporal Filtering**: A timeline slider to query flood events between 2003 and 2024.
-* **Spatial Filtering**: Toggleable state filters (Florida, Georgia, South Carolina, North Carolina, Alabama, Mississippi, Virginia) with "Match Any" or "Match All" inclusion logic.
-* **Impact Statistics**: Calculates aggregate statistics functionally based on active filters, including total displaced populations and average flood duration.
+
+* **Interactive Web Dashboard**: A React and Leaflet-based map interface that allows users to filter geospatial flood data by year, affected states, and match criteria.
+* **Data Processing**: Python and Jupyter Notebooks used for cleaning, combining, and preparing raw geospatial data.
+* **Causal Link Analysis**: Integrating DFO and NRT datasets to train an AI model to uncover causal relationships in flood triggers.
+
+## Repository Structure
+
+* `src/` - Source code for the interactive frontend map dashboard.
+* `data_clean/` - Processed, lightweight datasets like `DFO_Southeast_2003_2024.csv` used directly by the application and models.
 
 ## Technologies Used
-* **Data Processing**: Python, Jupyter Notebooks, Pandas, GeoPandas.
-* **Frontend Dashboard**: React, TypeScript, Vite.
-* **Geospatial UI**: React-Leaflet, rc-slider, Tailwind CSS.
 
-## Getting Started
-
-### Prerequisites
-* Node.js (v18+)
-* Python 3.8+ (for notebook execution)
-
-### Running the Dashboard Locally
-1. Clone the repository to your local machine.
-2. Navigate to the project directory.
-3. Install the required Node dependencies:
-   ```bash
-   npm install
+* **Frontend**: React, TypeScript, React-Leaflet, Tailwind CSS
+* **Backend**: Python, Jupyter, Pandas
