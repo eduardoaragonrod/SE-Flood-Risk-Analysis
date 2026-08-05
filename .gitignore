@@ -1,0 +1,5 @@
+data_raw/
+.ipynb_checkpoints/
+__pycache__/
+venv/
+notebooks/
